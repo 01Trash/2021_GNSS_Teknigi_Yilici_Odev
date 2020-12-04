@@ -19,6 +19,16 @@ NN  |    x (m)    |    y (m)    |  Doğrultu (gon)
 34  |  21756.765  |  28874.917  |    80.18273
 32  |  21760.503  |  25496.384  |    276.62136
 """
+"""#Bilinenlerin istenmesi
+X_27 = input("X_27: ")
+Y_27 = input("Y_27: ")
+X_34 = input("X_34: ")
+Y_34 = input("Y_34: ")
+X_32 = input("X_32: ")
+Y_32 = input("Y_32: ")
+alfa_grad = input("alfa_grad: ")
+gama_grad = input("gama_grad: ")
+beta_grad = input("beta_grad: ")!"""
 """Koordinatları bilinen iki nokta arası mesafe:
 Ara_Mesafe = math.sqrt(((X2 - X1) ** 2) + ((Y2 - Y1) ** 2))"""
 """27-34 arası mesafe = k"""
@@ -43,16 +53,6 @@ Y_32 = 25496.384
 g = math.sqrt(((X_34 - X_32) ** 2) + ((Y_34 - Y_32) ** 2))
 #print("g: ", g)
 
-"""32, 27, 24 arası açı = teta / (Ɵ => Teta işareti)"""
-"""Kosinüs teoreminden Ɵ (Teta) açısını hesaplayalım
-g ** 2 = (k ** 2) + (l ** 2) - 2 * k * l * math.cos(teta)
-Teta açısı tek bir tarafa alınırsa =>
-teta = math.acos((k ** 2 + l ** 2 - g **2) / (2 * k * l))"""
-teta = math.acos((k ** 2 + l ** 2 - g **2) / (2 * k * l))
-teta_grad = (200 * teta) / math.pi
-#print("teta_grad: ", teta_grad)
-#print("teta: ", teta)
-
 """Python trigonometrik hesaplarda, radyan ile hesap yaptığı için gradı radyana çevirelim:
 radyan = (grad * math.pi) / 200"""
 """27, 133, 34 arası açı = alfa / (α => Alfa İşareti)"""
@@ -72,6 +72,16 @@ gama = (gama_grad * math.pi) / 200
 beta_grad = 276.62136 - 80.18273
 beta = (beta_grad * math.pi) / 200
 #print("beta: ", beta)
+
+"""32, 27, 24 arası açı = teta / (Ɵ => Teta işareti)"""
+"""Kosinüs teoreminden Ɵ (Teta) açısını hesaplayalım
+g ** 2 = (k ** 2) + (l ** 2) - 2 * k * l * math.cos(teta)
+Teta açısı tek bir tarafa alınırsa =>
+teta = math.acos((k ** 2 + l ** 2 - g **2) / (2 * k * l))"""
+teta = math.acos((k ** 2 + l ** 2 - g **2) / (2 * k * l))
+teta_grad = (200 * teta) / math.pi
+#print("teta_grad: ", teta_grad)
+#print("teta: ", teta)
 
 """Semt açısı hesabı
 #27-34 => math.atan(semt_27_34) = (Y_34 - Y_27) / (X_34 - X_27)"""
