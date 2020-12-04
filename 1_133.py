@@ -11,7 +11,7 @@ import math
 32, 27, 24 arası açı = teta / (Ɵ => Teta işareti),
 27, 133, 34 arası açı = alfa / (α => Alfa İşareti),
 32, 133, 27 arası açı = gama / (Ɣ => Gama İşareti),
-27, 133, 32 arası açı = beta / (β => Beta İşareti),
+34, 133, 32 arası açı = beta / (β => Beta İşareti),
 """
 """
 NN  |    x (m)    |    y (m)    |  Doğrultu (gon)
@@ -75,14 +75,15 @@ beta_grad = 276.62136 - 80.18273
 beta = (beta_grad * math.pi) / 200
 print("beta: ", beta)
 
-"""Semt açısı hesabı"""
-#27-34 => math.atan(semt_27_34) = (Y_34 - Y_27) / (X_34 - X_27)
+"""Semt açısı hesabı
+#27-34 => math.atan(semt_27_34) = (Y_34 - Y_27) / (X_34 - X_27)"""
 semt_27_34 = math.atan((Y_34 - Y_27) / (X_34 - X_27)) + math.pi
 semt_27_34_grad = (200 * semt_27_34) / math.pi
 print("semt_27_34_grad: ", semt_27_34_grad)
 print("semt_27_34: ", semt_27_34)
 
-#27-32 => math.atan(semt_27_32) = (Y_32 - Y_27) / (X_32 - X_27)
+"""Semt açısı hesabı
+#27-32 => math.atan(semt_27_32) = (Y_32 - Y_27) / (X_32 - X_27)"""
 semt_27_32 = math.atan((Y_32 - Y_27) / (X_32 - X_27)) + math.pi
 semt_27_32_grad = (200 * semt_27_32) / math.pi
 print("semt_27_32_grad: ", semt_27_32_grad)
@@ -111,14 +112,25 @@ a4 / 2 + a4 / 2 = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad"""
 a4_grad = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad
 print("a4_grad: ", a4_grad)
 a3_grad = 2 * a4_a3_toplam_yarim_grad - a4_grad
+a3 = (200 * a3_grad) / math.pi
 print("a3_grad: ", a3_grad)
-a2_grad = 200 - gama - a4_grad
+a2_grad = 200 - gama_grad - a4_grad
 print("a2_grad: ", a2_grad)
-a1_grad = 200 - alfa - a3_grad
+a1_grad = 200 - alfa_grad - a3_grad
 print("a1_grad: ", a1_grad)
 
+"""Semt açısı hesabı
+semt_27_133_grad = semt_27_34_grad + a1_grad"""
+semt_27_133_grad = semt_27_34_grad + a1_grad
+semt_27_133 = (semt_27_133_grad / math.pi) * 200
+print("semt_27_133_grad: ", semt_27_133_grad)
+
 """#27-133 arası mesafe = m"""
+m = (k / math.sin(alfa)) * math.sin(a3)
+print("m: ", m)
 
-"""#133-34 arası mesafe = t"""
-
-"""#133-32 arası mesade = s"""
+"""133 noktasının koordinat hesabı"""
+Y_133 = Y_27 + m * math.sin(semt_27_133)
+X_133 = X_27 + m * math.cos(semt_27_133)
+print("133 x: ", X_133)
+print("133 y: ", Y_133)
