@@ -24,25 +24,25 @@ Koordinatları bilinen iki nokta arası mesafe:
 Ara_Mesafe = math.sqrt(((X2 - X1) ** 2) + ((Y2 - Y1) ** 2))
 """
 #27-34 arası mesafe = k
-X2_27 = 23312.451
-X1_34 = 21756.765
-Y2_27 = 27320.592
-Y1_34 = 28874.917
-k = math.sqrt(((X2_27 - X1_34) ** 2) + ((Y2_27 - Y1_34) ** 2))
+X_27 = 23312.451
+X_34 = 21756.765
+Y_27 = 27320.592
+Y_34 = 28874.917
+k = math.sqrt(((X_27 - X_34) ** 2) + ((Y_27 - Y_34) ** 2))
 print("k: ", k)
 #27-32 arası mesafe = l,
-X2_27 = 23312.451
-X1_32 = 21760.503
-Y2_27 = 27320.592
-Y1_32 = 25496.384
-l = math.sqrt(((X2_27 - X1_32) ** 2) + ((Y2_27 - Y1_32) ** 2))
+X_27 = 23312.451
+X_32 = 21760.503
+Y_27 = 27320.592
+Y_32 = 25496.384
+l = math.sqrt(((X_27 - X_32) ** 2) + ((Y_27 - Y_32) ** 2))
 print("l: ", l)
 #34-32 arası mesafe = g,
-X2_34 = 21756.765
-X1_32 = 21760.503
-Y2_34 = 28874.917
-Y1_32 = 25496.384
-g = math.sqrt(((X2_34 - X1_32) ** 2) + ((Y2_34 - Y1_32) ** 2))
+X_34 = 21756.765
+X_32 = 21760.503
+Y_34 = 28874.917
+Y_32 = 25496.384
+g = math.sqrt(((X_34 - X_32) ** 2) + ((Y_34 - Y_32) ** 2))
 print("g: ", g)
 
 #32, 27, 24 arası açı = teta / (Ɵ => Teta işareti)
@@ -71,20 +71,29 @@ print("gama: ", gama)
 
 #27, 133, 32 arası açı = beta / (β => Beta İşareti)
 #beta = 276.62136 grad
-beta_grad = 276.62136
+beta_grad = 276.62136 - 80.18273
 beta = (beta_grad * math.pi) / 200
 print("beta: ", beta)
 
-"""#gama_grad + alfa_grad + beta_grad + (a4 + a3) = 400
-a4_a3 = 400 - (gama_grad + alfa_grad + beta_grad)
-print("a4 + a3: ", a4_a3)"""
+#beta = a4 + a3 + teta => a4 + a3 = beta - teta
+a4_a3 = beta_grad - teta_grad
+print("a4 + a3: ", a4_a3)
+
+u = math.atan((l * math.sin(alfa)) / (k * math.sin(gama)))
+print("u: ", u)
 
 """Semt açısı hesabı"""
-#27-34 => math.atan(semt_27_34) = (Y2_27 - Y1_34) / (X2_27 - X1_34)
-semt_27_34 = math.atan((Y2_27 - Y1_34) / (X2_27 - X1_34))
+#27-34 => math.atan(semt_27_34) = (Y_34 - Y_27) / (X_34 - X_27)
+semt_27_34 = math.atan((Y_34 - Y_27) / (X_34 - X_27)) + math.pi
 semt_27_34_grad = (200 * semt_27_34) / math.pi
 print("semt_27_34_grad: ", semt_27_34_grad)
 print("semt_27_34: ", semt_27_34)
+
+#27-32 => math.atan(semt_27_32) = (Y_32 - Y_27) / (X_32 - X_27)
+semt_27_32 = math.atan((Y_32 - Y_27) / (X_32 - X_27)) + math.pi
+semt_27_32_grad = (200 * semt_27_32) / math.pi
+print("semt_27_32_grad: ", semt_27_32_grad)
+print("semt_27_32: ", semt_27_32)
 
 """#27-133 arası mesafe = m"""
 
