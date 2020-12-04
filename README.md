@@ -4,7 +4,7 @@
 
   **1) Yukarıdaki şekilde yatay koordinatları bilinen 27, 32 ve 34 numaralı noktalara koordinatları bilinmeyen 133 numaralı istasyondan doğrultu gözlemleri yapılmıştır. 133 nolu noktanın koordinatlarını hesaplayınız.**
 
-**1_133.py**
+### 1_133.py
 ![133](https://i.imgur.com/DLyAVq1.png)
 
 
@@ -19,5 +19,5 @@
 
 **Not: Nutasyon matrisi kutup hareketi (yer dönüklük) parametrelerini IERS C04 tablosundan IAU1980 modeline göre alabilirsiniz.**
 
-**2_a.py**
+### 2_a.py
 ![2_a](https://i.imgur.com/QHUIhlq.png)
