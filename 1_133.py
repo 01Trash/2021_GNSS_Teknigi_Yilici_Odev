@@ -23,7 +23,7 @@ NN  |    x (m)    |    y (m)    |  Doğrultu (gon)
 Ara_Mesafe = math.sqrt(((X2 - X1) ** 2) + ((Y2 - Y1) ** 2))"""
 """27-34 arası mesafe = k"""
 X_27 = 23312.451
-X_34 = 21760.503
+X_34 = 21756.765
 Y_27 = 27320.592
 Y_34 = 28874.917
 k = math.sqrt(((X_27 - X_34) ** 2) + ((Y_27 - Y_34) ** 2))
@@ -132,7 +132,8 @@ a1_grad = 200 - alfa_grad - a3_grad
 """Semt açısı hesabı
 semt_27_133_grad = semt_27_34_grad + a1_grad"""
 semt_27_133_grad = semt_27_34_grad + a1_grad
-semt_27_133 = (semt_27_133_grad / math.pi) * 200
+semt_27_133 = (semt_27_133_grad / 200) * math.pi
+#print("semt_27_133: ", semt_27_133)
 #print("semt_27_133_grad: ", semt_27_133_grad)
 
 """#27-133 arası mesafe = m"""
@@ -142,6 +143,6 @@ m = (k / math.sin(alfa)) * math.sin(a3)
 """133 noktasının koordinat hesabı"""
 Y_133 = Y_27 + m * math.sin(semt_27_133)
 X_133 = X_27 + m * math.cos(semt_27_133)
-print("133 x: ", round(X_133,3))
-print("133 y: ", round(Y_133,3))
+print("133 x: ", round(X_133,4), "m")
+print("133 y: ", round(Y_133,4), "m")
 
