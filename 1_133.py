@@ -143,6 +143,7 @@ m = (k / math.sin(alfa)) * math.sin(a3)
 """133 noktasının koordinat hesabı"""
 Y_133 = Y_27 + m * math.sin(semt_27_133)
 X_133 = X_27 + m * math.cos(semt_27_133)
-print("133 x: ", round(X_133,4), "m")
-print("133 y: ", round(Y_133,4), "m")
+print(" NN:       x(m)     |     y(m)")
+print("133:   ", round(X_133,4), " | ", round(Y_133,4))
+
 
