@@ -89,10 +89,11 @@ print("semt_27_32_grad: ", semt_27_32_grad)
 print("semt_27_32: ", semt_27_32)
 
 #beta = a4 + a3 + teta => a4 + a3 = beta - teta
-a4_a3_toplam = beta_grad - teta_grad
-a4_a3_toplam_yarim = a4_a3_toplam / 2
-print("a4 + a3: ", a4_a3_toplam)
-print("(a4 + a3) / 2: ", a4_a3_toplam_yarim)
+a4_a3_toplam_grad = beta_grad - teta_grad
+a4_a3_toplam_yarim_grad = a4_a3_toplam_grad / 2
+a4_a3_toplam_yarim = (a4_a3_toplam_yarim_grad * math.pi) / 200
+print("a4 + a3: ", a4_a3_toplam_grad)
+print("(a4 + a3) / 2: ", a4_a3_toplam_yarim_grad)
 
 #u hesabı
 u = math.atan((l * math.sin(alfa)) / (k * math.sin(gama)))
@@ -100,8 +101,15 @@ u_grad = (200 * u) / math.pi
 print("u_grad: ", u_grad)
 
 #math.tan((a4 - a3) / 2) = math.tan((a4 + a3) / 2) * math.cot(50 + u)
-a4_a3_fark_yarim = math.atan(math.tan(a4_a3_toplam_yarim) * math.cot(50 + u))
+a4_a3_fark_yarim = math.atan(math.tan(a4_a3_toplam_yarim) * (1 / math.tan((math.pi / 2) + u)))
+a4_a3_fark_yarim_grad = (200 * a4_a3_fark_yarim) / math.pi
 print("(a4 - a3) / 2: ", a4_a3_fark_yarim)
+print("(a4 - a3) / 2: ", a4_a3_fark_yarim_grad)
+
+"""(a4 + a3) / 2 + (a4 - a3) / 2 = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad =>
+a4 / 2 + a4 / 2 = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad"""
+a4_grad = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad
+print("a4: ", a4_grad)
 
 """#27-133 arası mesafe = m"""
 
