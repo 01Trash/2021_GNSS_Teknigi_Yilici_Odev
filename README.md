@@ -21,3 +21,14 @@
 
 ### 2_a.py
 ![2_a](https://i.imgur.com/QHUIhlq.png)
+
+### 2_b.py
+
+### 2_c.py
+
+### 2_d.py
+
+### 2_e.py
+
+### 2_f.py
+
