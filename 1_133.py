@@ -101,7 +101,7 @@ u_grad = (200 * u) / math.pi
 print("u_grad: ", u_grad)
 
 #math.tan((a4 - a3) / 2) = math.tan((a4 + a3) / 2) * math.cot(50 + u)
-a4_a3_fark_yarim = math.atan(math.tan(a4_a3_toplam_yarim) * (1 / math.tan((math.pi / 2) + u)))
+a4_a3_fark_yarim = math.atan(math.tan(a4_a3_toplam_yarim) * (1 / math.tan((math.pi / 4) + u)))
 a4_a3_fark_yarim_grad = (200 * a4_a3_fark_yarim) / math.pi
 print("(a4 - a3) / 2: ", a4_a3_fark_yarim)
 print("(a4 - a3) / 2: ", a4_a3_fark_yarim_grad)
@@ -109,7 +109,13 @@ print("(a4 - a3) / 2: ", a4_a3_fark_yarim_grad)
 """(a4 + a3) / 2 + (a4 - a3) / 2 = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad =>
 a4 / 2 + a4 / 2 = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad"""
 a4_grad = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad
-print("a4: ", a4_grad)
+print("a4_grad: ", a4_grad)
+a3_grad = 2 * a4_a3_toplam_yarim_grad - a4_grad
+print("a3_grad: ", a3_grad)
+a2_grad = 200 - gama - a4_grad
+print("a2_grad: ", a2_grad)
+a1_grad = 200 - alfa - a3_grad
+print("a1_grad: ", a1_grad)
 
 """#27-133 arası mesafe = m"""
 
