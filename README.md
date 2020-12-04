@@ -1,6 +1,6 @@
 # GNSS
 
-![133](https://i.imgur.com/bjr3WFO.png)
+![133](https://i.imgur.com/ythbI5H.png)
 
   **1) Yukarıdaki şekilde yatay koordinatları bilinen 27, 32 ve 34 numaralı noktalara koordinatları bilinmeyen 133 numaralı istasyondan doğrultu gözlemleri yapılmıştır. 133 nolu noktanın koordinatlarını hesaplayınız.**
 
