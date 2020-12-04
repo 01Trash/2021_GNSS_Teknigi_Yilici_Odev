@@ -1,6 +1,6 @@
 # GNSS
 
-![133](https://i.imgur.com/ythbI5H.png)
+![1](https://i.imgur.com/ythbI5H.png)
 
   **1) Yukarıdaki şekilde yatay koordinatları bilinen 27, 32 ve 34 numaralı noktalara koordinatları bilinmeyen 133 numaralı istasyondan doğrultu gözlemleri yapılmıştır. 133 nolu noktanın koordinatlarını hesaplayınız.**
 
@@ -18,5 +18,9 @@
 + **e) presesyon ve nutasyon matrisi bilgisini,**
 + **f) kutup hareketi bilgisini hesaplayınız.**
 
-
 **Not: Nutasyon matrisi kutup hareketi (yer dönüklük) parametrelerini IERS C04 tablosundan IAU1980 modeline göre alabilirsiniz.**
+
+2_a.py
+======
+
+![2_a](https://i.imgur.com/QHUIhlq.png)
