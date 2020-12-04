@@ -23,7 +23,7 @@ NN  |    x (m)    |    y (m)    |  Doğrultu (gon)
 Ara_Mesafe = math.sqrt(((X2 - X1) ** 2) + ((Y2 - Y1) ** 2))"""
 """27-34 arası mesafe = k"""
 X_27 = 23312.451
-X_34 = 21756.765
+X_34 = 21760.503
 Y_27 = 27320.592
 Y_34 = 28874.917
 k = math.sqrt(((X_27 - X_34) ** 2) + ((Y_27 - Y_34) ** 2))
@@ -121,7 +121,8 @@ a4 / 2 + a4 / 2 = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad"""
 a4_grad = a4_a3_toplam_yarim_grad + a4_a3_fark_yarim_grad
 #print("a4_grad: ", a4_grad)
 a3_grad = 2 * a4_a3_toplam_yarim_grad - a4_grad
-a3 = (200 * a3_grad) / math.pi
+a3 = (math.pi * a3_grad) / 200
+#print("a3: ", a3)
 #print("a3_grad: ", a3_grad)
 a2_grad = 200 - gama_grad - a4_grad
 #print("a2_grad: ", a2_grad)
