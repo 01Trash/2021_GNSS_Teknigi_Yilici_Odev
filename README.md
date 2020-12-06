@@ -4,7 +4,7 @@
 
   **1) Yukarıdaki şekilde yatay koordinatları bilinen 27, 32 ve 34 numaralı noktalara koordinatları bilinmeyen 133 numaralı istasyondan doğrultu gözlemleri yapılmıştır. 133 nolu noktanın koordinatlarını hesaplayınız.**
   
-### 1_133.py
+### 1.py
 ![133](https://i.imgur.com/DLyAVq1.png)
 
 
