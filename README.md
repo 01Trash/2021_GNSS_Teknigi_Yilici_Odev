@@ -16,6 +16,7 @@
 + **d) Gerçek yıldız zamanı bilgisini,**
 + **e) Presesyon ve nutasyon matrisi bilgisini,**
 + **f) Kutup hareketi bilgisini hesaplayınız.**
+**Sayısal sonuçları kullandığınız yöntemi açıklayan bir rapor ile birlikte gösterilecektir.**
 
 **Not: Nutasyon matrisi kutup hareketi (yer dönüklük) parametrelerini IERS C04 tablosundan IAU1980 modeline göre alabilirsiniz.**
 
