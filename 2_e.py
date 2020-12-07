@@ -20,17 +20,35 @@ JD = floor(365.25 * y) + floor(30.6004 * (m + 1)) + d + (h / 24) + 1720981.5
 
 #t hesabı
 t = (JD - 2451545.0) / 36525
-print("t: ", t)
+#print("t: ", t)
 
 a = 2306.2181 * t + 0.30188 * t * t + 0.017998 * t * t * t
-print("a: ", a)
+#print("a: ", a)
 b = 2004.3109 * t - 0.42665 * t * t - 0.041833 * t * t * t
-print("b: ", b)
+#print("b: ", b)
 c = 2306.218 * t + 1.09468 * t * t + 0.018203 * t * t * t
-print("c: ", c)
+#print("c: ", c)
+#Grad = (Radyan * pi) / 200
+a = (a * pi) / 200
+b = (b * pi) / 200
+c = (c * pi) / 200
 
 #Presesyon Matrisi
-P_t = 0
+Pmatris_1_1 = cos(a) * cos(b) * cos(c) - sin(a) * sin(c)
+Pmatris_1_2 = - sin(a) * cos(b) * cos(c) - cos(a) * sin(c)
+Pmatris_1_3 = - sin(b) * cos(c)
+Pmatris_2_1 = cos(a) * cos(b) * cos(c) + sin(a) * sin(c)
+Pmatris_2_2 = - sin(a) * cos(b) * cos(c) + cos(a) * sin(c)
+Pmatris_2_3 = - sin(b) * sin(c)
+Pmatrsi_3_1 = cos(a) * sin(b)
+Pmatris_3_2 = - sin(a) * sin(b)
+Pmatris_3_3 = cos(b)
+#Ekrana yazdırma
+print("       |  {:f}    {:f}    {:f}  |" .format(Pmatris_1_1, Pmatris_1_2, Pmatris_1_3))
+print("P(t) = |   {:f}     {:f}    {:f}  |" .format(Pmatris_2_1, Pmatris_2_2, Pmatris_2_3))
+print("       |   {:f}    {:f}     {:f}  |" .format(Pmatrsi_3_1, Pmatris_3_2, Pmatris_3_3))
+
+
 
 #Nutasyon Matrisi
 N_t = 0
