@@ -10,15 +10,35 @@ dakika = int(input("Dakika: "))
 saniye = int(input("Saniye: "))"""
 
 #GPS = UTC + 18 saniye
-print("GPS => 06:02:18")
+saat = 6 + 0
+dakika = 2 + 0
+saniye = 0 + 18
+if saniye >= 60:
+    saniye = saniye % 60
+    dakika = dakika + 1
+print("GPS => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
 
 #GLONASS = UTC + 3 saat
-print("GLONASS => 09:02:00")
+saat = 6 + 3
+dakika = 2 + 0
+saniye = 0 + 0
+print("GLONASS => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
 
 #BEIOU = UTC + 4 saniye
-print("BEIOU => 06:02:04")
+saat = 6 + 0
+dakika = 2 + 0
+saniye = 0 + 4
+if saniye >= 60:
+    saniye = saniye % 60
+    dakika = dakika + 1
+print("BEIOU => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
 
 #GALILEO = UTC + 18 saniye
-print("GALILEO => 06:02:18")
-
+saat = 6 + 0
+dakika = 2 + 0
+saniye = 0 + 18
+if saniye >= 60:
+    saniye = saniye % 60
+    dakika = dakika + 1
+print("GALILEO => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
 
