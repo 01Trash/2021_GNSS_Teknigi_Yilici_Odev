@@ -11,9 +11,21 @@ saniye = int(input("Saniye: "))"""
 
 """TT = TAI + 32.184 saniye
 TAI = UTC + 37 saniye"""
-TAI = 0 + 37
-#print("TAI: 06:02:37")
-TT = 37 + 32.183
-print("TT => 06:03:09.184")
+saat = saat + 0
+dakika = dakika + 0
+saniye = saniye + 37
+if saniye >= 60:
+    saniye = saniye % 60
+    dakika = dakika + 1
+print("TAI => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
+TAI = saniye
+
+saat = saat + 0
+dakika = dakika + 0
+saniye = TAI + 32.183
+if saniye >= 60:
+    saniye = saniye % 60
+    dakika = dakika + 1
+print("TT => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
 
 
