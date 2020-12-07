@@ -26,6 +26,6 @@ saniye = TAI + 32.183
 if saniye >= 60:
     saniye = saniye % 60
     dakika = dakika + 1
-print("TT => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
+print("TT => {:.0f}:{:.0f}:{:.3f}" .format(saat, dakika, saniye))
 
 
