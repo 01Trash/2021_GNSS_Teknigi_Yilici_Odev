@@ -25,5 +25,5 @@ if GMST_saniye >= 60:
     GMST_dakika = GMST_dakika + 1
 if GMST_dakika >= 60:
     GMST_saat = GMST_saat % 60
-print("TT => {:.0f}:{:.0f}:{:.3f}" .format(GMST_saat, GMST_dakika, GMST_saniye))
+print("GMST => {:.0f}:{:.0f}:{:.3f}" .format(GMST_saat, GMST_dakika, GMST_saniye))
 
