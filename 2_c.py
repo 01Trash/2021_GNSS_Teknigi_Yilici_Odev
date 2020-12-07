@@ -17,7 +17,7 @@ saniye = saniye + 37
 if saniye >= 60:
     saniye = saniye % 60
     dakika = dakika + 1
-print("TAI => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
+#print("TAI => {:.0f}:{:.0f}:{:.0f}" .format(saat, dakika, saniye))
 TAI = saniye
 
 saat = saat + 0
