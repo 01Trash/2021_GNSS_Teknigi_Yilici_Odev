@@ -1,26 +1,20 @@
 """Kutup hareketi hesaplayınız!"""
 """Tarih: 18.11.2020; Saat: 06:02:00"""
-from math import *
+"""ECEF sistemine göre sayılar alınmıştır."""
 
-y = 2020
-m = 11
-d = 18
-h = 6
-"""y = int(input("Yıl: "))
-m = int(input("Ay: "))
-d = int(input("Gün: "))
-h = int(input('Saat: '))"""
-# Eğer ay değeri (m) küçük eşit 2 olursa m + 12 ve y - 1 işlemi uygulanır
-if m <= 2:
-    m = m + 12
-    y = y - 1
-# Jülyen günü hesabı JD
-JD = floor(365.25 * y) + floor(30.6004 * (m + 1)) + d + (h / 24) + 1720981.5
-#print("Jülyen günü: ", JD)
+x_p = 0.00009
+y_p = 0.00009
+Wmatris_1_1 = 1
+Wmatris_1_2 = 0
+Wmatris_1_3 = x_p
+Wmatris_2_1 = 0
+Wmatris_2_2 = 1
+Wmatris_2_3 = - y_p
+Wmatris_3_1 = - x_p
+Wmatris_3_2 = y_p
+Wmatris_3_3 = 1
+#Ekrana yazdırma
+print("       |    {:f}     {:f}     {:f}  |" .format(Wmatris_1_1, Wmatris_1_2, Wmatris_1_3))
+print("W(t) = |    {:f}     {:f}    {:f}  |" .format(Wmatris_2_1, Wmatris_2_2, Wmatris_2_3))
+print("       |   {:f}     {:f}     {:f}  |" .format(Wmatris_3_1, Wmatris_3_2, Wmatris_3_3))
 
-#t hesabı
-t = (JD - 2451545.0) / 36525
-print("t: ", t)
-
-#Kutup Hareket Matrisi
-W_t = 0
