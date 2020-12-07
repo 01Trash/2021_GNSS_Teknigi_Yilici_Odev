@@ -40,18 +40,26 @@ Pmatris_1_3 = - sin(b) * cos(c)
 Pmatris_2_1 = cos(a) * cos(b) * cos(c) + sin(a) * sin(c)
 Pmatris_2_2 = - sin(a) * cos(b) * cos(c) + cos(a) * sin(c)
 Pmatris_2_3 = - sin(b) * sin(c)
-Pmatrsi_3_1 = cos(a) * sin(b)
+Pmatris_3_1 = cos(a) * sin(b)
 Pmatris_3_2 = - sin(a) * sin(b)
 Pmatris_3_3 = cos(b)
 #Ekrana yazdırma
 print("       |  {:f}    {:f}    {:f}  |" .format(Pmatris_1_1, Pmatris_1_2, Pmatris_1_3))
 print("P(t) = |   {:f}     {:f}    {:f}  |" .format(Pmatris_2_1, Pmatris_2_2, Pmatris_2_3))
-print("       |   {:f}    {:f}     {:f}  |" .format(Pmatrsi_3_1, Pmatris_3_2, Pmatris_3_3))
-
-
-
+print("       |   {:f}    {:f}     {:f}  |" .format(Pmatris_3_1, Pmatris_3_2, Pmatris_3_3))
+print("------------------------------------------------")
 #Nutasyon Matrisi
-N_t = 0
-
-
+Nmatris_1_1 = cos(b)
+Nmatris_1_2 = - cos(c) * sin(b)
+Nmatris_1_3 = - sin(c) * sin(b)
+Nmatris_2_1 = cos(a) * sin(b)
+Nmatris_2_2 = cos(c) * cos(a) * cos(b) + sin(c) * sin(a)
+Nmatris_2_3 = sin(c) * cos(a) * cos(b) - cos(c) * sin(a)
+Nmatris_3_1 = sin(a) * sin(b)
+Nmatris_3_2 = cos(c) * sin(a) * cos(b) - sin(c) * cos(a)
+Nmatris_3_3 = sin(c) * sin(a) * cos(b) + cos(c) * cos(a)
+#Ekrana yazdırma
+print("       |   {:f}    {:f}    {:f}  |" .format(Nmatris_1_1, Nmatris_1_2, Nmatris_1_3))
+print("N(t) = |   {:f}     {:f}    {:f}  |" .format(Nmatris_2_1, Nmatris_2_2, Nmatris_2_3))
+print("       |   {:f}    {:f}     {:f}  |" .format(Nmatris_3_1, Nmatris_3_2, Nmatris_3_3))
 
