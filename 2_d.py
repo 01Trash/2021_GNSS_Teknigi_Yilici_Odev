@@ -2,23 +2,13 @@
 """Tarih: 18.11.2020; Saat: 06:02:00"""
 from math import *
 
-y = 2020
-m = 11
-d = 18
-h = 6
-"""y = int(input("Yıl: "))
-m = int(input("Ay: "))
-d = int(input("Gün: "))
-h = int(input('Saat: '))"""
-# Eğer ay değeri (m) küçük eşit 2 olursa m + 12 ve y - 1 işlemi uygulanır
-if m <= 2:
-    m = m + 12
-    y = y - 1
-# Jülyen günü hesabı JD
-JD = floor(365.25 * y) + floor(30.6004 * (m + 1)) + d + (h / 24) + 1720981.5
-#print("Jülyen günü: ", JD)
+saat = 6
+dakika = 2
+saniye = 0
+"""saat = int(input("Saat: "))
+dakika = int(input("Dakika: "))
+saniye = int(input("Saniye: "))"""
 
-#Yıldız zamanı hesabı Tu
-Tu = (JD - 2451545.0) / 36525
-print("Yıldız zamanı: ", Tu)
+#GMT = 06:02:00
+GMST = GMT - 12 + (GMST0 + 12) + Delta_R
 
