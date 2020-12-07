@@ -14,7 +14,7 @@ Wmatris_3_1 = - x_p
 Wmatris_3_2 = y_p
 Wmatris_3_3 = 1
 #Ekrana yazdırma
-print("       |    {:f}     {:f}     {:f}  |" .format(Wmatris_1_1, Wmatris_1_2, Wmatris_1_3))
-print("W(t) = |    {:f}     {:f}    {:f}  |" .format(Wmatris_2_1, Wmatris_2_2, Wmatris_2_3))
-print("       |   {:f}     {:f}     {:f}  |" .format(Wmatris_3_1, Wmatris_3_2, Wmatris_3_3))
+print("       |    {:.5f}     {:.5f}     {:.5f}  |" .format(Wmatris_1_1, Wmatris_1_2, Wmatris_1_3))
+print("W(t) = |    {:.5f}     {:.5f}    {:.5f}  |" .format(Wmatris_2_1, Wmatris_2_2, Wmatris_2_3))
+print("       |   {:.5f}     {:.5f}     {:.5f}  |" .format(Wmatris_3_1, Wmatris_3_2, Wmatris_3_3))
 
