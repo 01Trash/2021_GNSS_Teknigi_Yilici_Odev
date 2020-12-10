@@ -33,7 +33,7 @@
 ![2_d](https://i.imgur.com/Ah9PZXY.png)
 
 ### 2_e.py
-![2_e](https://i.hizliresim.com/HUeQfe.png)
+![2_e]()
 
 ### 2_f.py
 ![2_f](https://i.imgur.com/Th04NIh.png)
