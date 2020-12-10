@@ -17,11 +17,11 @@ if m <= 2:
 # Jülyen günü hesabı JD
 JD = floor(365.25 * y) + floor(30.6004 * (m + 1)) + d + (h / 24) + 1720981.5
 #print("Jülyen günü: ", JD)
+JDs = 0
 
 #t hesabı
-t = (JD - 2451545.0) / 36525
+t = (JDs - JD) / 36525
 #print("t: ", t)
-
 a = 2306.2181 * t + 0.30188 * t * t + 0.017998 * t * t * t
 a = a / 3600
 #print("a: ", a)
@@ -51,6 +51,29 @@ print("       |   {:f}    {:f}    {:f}  |" .format(Pmatris_1_1, Pmatris_1_2, Pma
 print("P(t) = |   {:f}     {:f}    {:f}  |" .format(Pmatris_2_1, Pmatris_2_2, Pmatris_2_3))
 print("       |   {:f}    {:f}     {:f}  |" .format(Pmatris_3_1, Pmatris_3_2, Pmatris_3_3))
 print("------------------------------------------------")
+
+
+#Tu hesabı
+Tu = (JD - 2451545.0) / 36525
+#print("Tu: ", Tu)
+N = (125 + 2 / 60 + 40.280 / 3600) - ((1934 + 8 / 60 + 10.539 / 3600) * Tu) + ((7.455 / 3600) * Tu * Tu * Tu) + ((0.008 / 3600) * Tu * Tu * Tu)
+D = (297 + 51 / 60 + 1.307 / 3600) + ((445267 + 6 / 60 + 41.328 / 3600) * Tu) - ((6.891 / 3600) * Tu * Tu) + ((0.019 / 3600) * Tu * Tu * Tu)
+F = (93 + 16 / 60 + 18.877 / 3600) + ((483202 + 1 / 60 + 3.137 / 3600) * Tu) - ((13.257 / 3600) * Tu * Tu) + ((0.011 / 3600) * Tu * Tu * Tu)
+#Grad = (Radyan * pi) / 200
+N = (N * pi) / 200
+D = (D * pi) / 200
+F = (F * pi) / 200
+a = (23 + 26 / 60 + 21.448 / 3600) - ((46.815 * Tu) / 3600 - 0.00059 * Tu * Tu) + (0.001813 * Tu * Tu * Tu)
+#print("a: ", a)
+b = ((9.2025 / 3600) * cos(N)) + ((0.5736 / 3600) * cos(2 * F - 2 * D - 2 * N)) + ((0.0927 / 3600) * cos(2 * F - 2 * N))
+#print("b: ", b)
+c = -((17.199 / 3600) * sin(N)) - ((1.3187 / 3600) * sin(2 * F - 2 * D - 2 * N)) - ((0.2274 / 3600) * sin(2 * F - 2 * N))
+#print("c: ", c)
+#Grad = (Radyan * pi) / 200
+a = (a * pi) / 200
+b = (b * pi) / 200
+c = (c * pi) / 200
+
 #Nutasyon Matrisi
 Nmatris_1_1 = cos(b)
 Nmatris_1_2 = - cos(c) * sin(b)
@@ -65,5 +88,4 @@ Nmatris_3_3 = sin(c) * sin(a) * cos(b) + cos(c) * cos(a)
 print("       |   {:f}    {:f}    {:f}  |" .format(Nmatris_1_1, Nmatris_1_2, Nmatris_1_3))
 print("N(t) = |   {:f}     {:f}     {:f}  |" .format(Nmatris_2_1, Nmatris_2_2, Nmatris_2_3))
 print("       |   {:f}    {:f}     {:f}  |" .format(Nmatris_3_1, Nmatris_3_2, Nmatris_3_3))
-
 
