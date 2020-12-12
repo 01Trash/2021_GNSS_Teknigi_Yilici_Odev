@@ -20,7 +20,7 @@ if m <= 2:
     y = y - 1
 # Jülyen günü hesabı
 JD = floor(365.25 * y) + floor(30.6004 * (m + 1)) + d + ((h + minute/60 + second/3600) / 24) + 1720981.5
-print("Jülyen günü: {:.2f}" .format(JD))
+print("Jülyen günü: {:.4f}" .format(JD))
 # GPS haftası hesabı
 GW = floor((JD - 2444244.5) / 7)
 print("GPS haftası: ", GW)
