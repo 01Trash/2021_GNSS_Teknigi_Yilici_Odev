@@ -24,7 +24,7 @@
 ![2_a](https://i.imgur.com/jpDhici.png)
 
 ### 2_b.py
-![2_b](https://i.imgur.com/owpcZL1.png)
+![2_b]()
 
 ### 2_c.py
 ![2_c](https://i.imgur.com/Rfqx3G7.png)
