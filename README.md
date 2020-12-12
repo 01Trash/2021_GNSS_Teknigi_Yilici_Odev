@@ -21,22 +21,22 @@
 **Not: Nutasyon matrisi kutup hareketi (yer dönüklük) parametrelerini IERS C04 tablosundan IAU1980 modeline göre alabilirsiniz.**
 
 ### 2_a.py
-![2_a](https://i.imgur.com/jpDhici.png)
+![2_a]()
 
 ### 2_b.py
 ![2_b]()
 
 ### 2_c.py
-![2_c](https://i.imgur.com/Rfqx3G7.png)
+![2_c]()
 
 ### 2_d.py
-![2_d](https://i.imgur.com/Ah9PZXY.png)
+![2_d]()
 
 ### 2_e.py
-![2_e](https://i.hizliresim.com/Y9kKvo.png)
+![2_e]()
 
 ### 2_f.py
-![2_f](https://i.imgur.com/Th04NIh.png)
+![2_f]()
 
 
 
