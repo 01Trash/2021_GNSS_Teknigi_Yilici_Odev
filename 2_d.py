@@ -50,5 +50,5 @@ GMST_second = GMST
 #print(GMST_hour)
 #print(GMST_minute)
 #print(GMST_second)
-print("GMST => {:.0f} s {:.0f} d {:f} s" .format(GMST_hour, GMST_minute, GMST_second))
+print("GMST => {:.0f} h {:.0f} m {:.4f} s" .format(GMST_hour, GMST_minute, GMST_second))
 
